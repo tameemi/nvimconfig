@@ -4,7 +4,7 @@ return {
     dependencies = {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
-        buid = "make",
+        -- buid = "make",
       },
       "nvim-telescope/telescope-file-browser.nvim",
     },
