@@ -38,7 +38,7 @@ vim.opt.splitkeep = "cursor"
 --vim.opt.mouse = ""
 
 -- needed for tmux weird behavior
-vim.opt.timeoutlen = 100
+-- vim.opt.timeoutlen = 100
 vim.opt.ttimeoutlen = 0
 
 -- Add asterisks in block comments
