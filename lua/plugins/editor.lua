@@ -4,7 +4,7 @@ return {
     dependencies = {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
-        -- buid = "make",
+        build = "make",
       },
       "nvim-telescope/telescope-file-browser.nvim",
     },
@@ -19,7 +19,7 @@ return {
         desc = "Find Plugin File",
       },
       {
-        ";f",
+        "\\f",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
@@ -30,7 +30,7 @@ return {
         desc = "Lists files in your current working directory, respects .gitignore",
       },
       {
-        ";r",
+        "\\r",
         function()
           local builtin = require("telescope.builtin")
           builtin.live_grep({
@@ -48,23 +48,23 @@ return {
         desc = "Lists open buffers",
       },
       {
-        ";t",
+        "\\t",
         function()
           local builtin = require("telescope.builtin")
           builtin.help_tags()
         end,
         desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
       },
+      -- {
+      --   ";;",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.resume()
+      --   end,
+      --   desc = "Resume the previous telescope picker",
+      -- },
       {
-        ";;",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.resume()
-        end,
-        desc = "Resume the previous telescope picker",
-      },
-      {
-        ";e",
+        "\\e",
         function()
           local builtin = require("telescope.builtin")
           builtin.diagnostics()
@@ -72,7 +72,7 @@ return {
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
       {
-        ";s",
+        "\\s",
         function()
           local builtin = require("telescope.builtin")
           builtin.treesitter()
