@@ -11,13 +11,13 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 | key                           | func                                                                                                        |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| ;f                            | Lists files in your current working directory, respects .gitignore n                                        |
-| ;r                            | Search for a string in your current working directory and get results live as you type, respects .gitignore |
+| \f                            | Lists files in your current working directory, respects .gitignore n                                        |
+| \r                            | Search for a string in your current working directory and get results live as you type, respects .gitignore |
 | \\\\                          | Lists open buffers                                                                                          |
-| ;t                            | Lists available help tags and opens a new window with the relevant help info on `<cr>`                      |
+| \t                            | Lists available help tags and opens a new window with the relevant help info on `<cr>`                      |
 | ;;                            | Resume the previous telescope picker                                                                        |
-| ;e                            | Lists Diagnostics for all open buffers or a specific buffer                                                 |
-| ;s                            | Lists Function names, variables, from Treesitter                                                            |
+| \e                            | Lists Diagnostics for all open buffers or a specific buffer                                                 |
+| \s                            | Lists Function names, variables, from Treesitter                                                            |
 | sf                            | Open File Browser with the path of the current buffer                                                       |
 | for file browser (all n mode) |                                                                                                             |
 | N                             | Create a new file                                                                                           |
