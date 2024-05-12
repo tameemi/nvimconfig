@@ -52,6 +52,9 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 --vim.opt.mouse = ""
 
+-- remove folders from netrew
+vim.g.netrw_list_hide = [[^\.\.\=/\=$,.DS_Store,.next,.idea,.git,node_modules,*\.o,*\.pyc,.*\.swp]]
+
 -- needed for tmux weird behavior
 -- vim.opt.timeoutlen = 100
 vim.opt.ttimeoutlen = 0
