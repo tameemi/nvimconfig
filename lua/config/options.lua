@@ -15,6 +15,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+-- wrap line
 vim.opt.wrap = false
 
 vim.opt.number = true
@@ -53,7 +54,13 @@ vim.opt.splitkeep = "cursor"
 --vim.opt.mouse = ""
 
 -- remove folders from netrew
-vim.g.netrw_list_hide = [[^\.\.\=/\=$,.DS_Store,.next,.idea,.git,node_modules,*\.o,*\.pyc,.*\.swp]]
+-- vim.g.netrw_list_hide = [[^\.\.\=/\=$,.DS_Store,.next,.idea,.git,node_modules,*\.o,*\.pyc,.*\.swp]]
+
+-- Patterns for hiding files, e.g. node_modules
+-- NOTE: this works by reading '.gitignore' file
+vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
+-- neeeded to prevent some copy errors
+-- vim.g.netrw_keepdir = 0
 
 -- needed for tmux weird behavior
 -- vim.opt.timeoutlen = 100
