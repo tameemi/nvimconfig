@@ -16,7 +16,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- wrap line
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.number = true
 
