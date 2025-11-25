@@ -47,8 +47,11 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- center when moving with ctrl d and ctrl u
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<C-d>", "20jzz")
+keymap.set("n", "<C-u>", "20kzz")
+
+keymap.set("n", "<C-f>", "<C-f>zz")
+keymap.set("n", "<C-b>", "<C-b>zz")
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()

@@ -10,9 +10,9 @@ vim.opt.termguicolors = true
 -- removes the cursor line
 vim.opt.guicursor = ""
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
@@ -43,7 +43,7 @@ vim.opt.colorcolumn = "80"
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
--- vim.opt.smarttab = true
+vim.opt.smarttab = true
 vim.opt.breakindent = true
 -- vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { "start", "eol", "indent" }
@@ -54,12 +54,23 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 --vim.opt.mouse = ""
 
+vim.g.snacks_animate = false
+
 -- remove folders from netrew
--- vim.g.netrw_list_hide = [[^\.\.\=/\=$,.DS_Store,.next,.idea,.git,node_modules,*\.o,*\.pyc,.*\.swp]]
+vim.g.netrw_list_hide = [[^\.\.\=/\=$,.DS_Store,.next,.idea,.git,node_modules,*\.o,*\.pyc,.*\.swp]]
+--
+vim.g.netrw_keepdir = 0
+-- vim.g.netrw_list_hide = '^\.git$|^\.gitignore$|^\.DS_Store$|^\.vscode$|node_modules$'
 
 -- Patterns for hiding files, e.g. node_modules
 -- NOTE: this works by reading '.gitignore' file
-vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
+vim.cmd([[
+  if exists('*netrw_gitignore#Hide')
+    call netrw_gitignore#Hide()
+  endif
+]])
+
+-- vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
 -- neeeded to prevent some copy errors
 -- vim.g.netrw_keepdir = 0
 
